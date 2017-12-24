@@ -1,0 +1,360 @@
+<html>
+	<head>
+		<script src="processing-1.4.1.js"></script>
+		<script type="text/processing" data-processing-target="mycanvas">
+			var layer1;
+			var layer2;
+			var layer3;
+			void setup(){
+				var canvasWidth = 1200;
+				var canvasHeight = 800;
+				var randomHeight = random(150, 350);
+				size(canvasWidth, canvasHeight);
+			  	background(252, 233, 225);
+			  	layer1 = new Lay(6, 150, 150, [250, 75, 145]);
+			  	layer2 = new Lay(3, 80, 300, [179, 252, 231]);
+			  	layer3 = new Lay(1, 60, 450, [188, 119, 252]);
+			}
+
+			void draw(){  
+				background(225, 252, 252);
+				drawCloudAndSun();
+				drawLollipop(); 
+				layer3.drawLayer();
+				layer3.moveLayer();
+				layer2.drawLayer();
+				layer2.moveLayer();
+				layer1.drawLayer();
+				layer1.moveLayer(); 
+				drawGumdrops();
+
+			}
+
+			void drawCloudAndSun(){
+				noStroke();
+			  	fill(255,241,168);
+			  	ellipse(620, 145,100,100);
+			  	fill(250, 150, 187);
+			  	ellipse(140, 250, 70, 100);
+			  	ellipse(110, 240, 70, 70);
+			  	ellipse(180, 250, 100, 80);
+			  	ellipse(740, 190, 166, 127);
+			  	ellipse(658,200,95,77);
+			  	ellipse(826,200,95,77);
+			}
+
+			void drawLollipop(){
+				var lolX = 200;
+				var lolY = 130;
+				noStroke();
+				fill(175, 173, 250);
+				rect(lolX, lolY, 8, 600, 2);
+				fill(252, 157, 106);
+				ellipse(lolX + 5, lolY - 20, 130, 130);
+				fill(250, 30, 104);
+				ellipse(lolX + 5, lolY - 20, 100, 100);
+
+				fill(175, 173, 250);
+				rect(lolX - 95, lolY + 20, 6, 600, 5);
+				fill(108, 200, 250);
+				ellipse(lolX - 95, lolY + 20, 130, 130);
+				fill(91, 63, 250);
+				ellipse(lolX - 95, lolY + 20, 100, 100);
+				fill(250, 50, 180);
+				ellipse(lolX - 95, lolY + 20, 70, 70);
+
+				fill(175, 173, 250);
+				rect(300, 150, 6, 600, 5);
+				fill(250, 145, 248);
+				ellipse(305, 130, 130, 130);
+				fill(151, 70, 227);
+				ellipse(305, 130, 70, 70);
+
+				fill(175, 173, 250);
+				rect(1000, 150, 8, 600, 5);
+				fill(86, 227, 124);
+				ellipse(1000, 155, 130, 130);
+				fill(255, 255, 255);
+				ellipse(1000, 155, 100, 100);
+				fill(54, 199, 170);
+				ellipse(1000, 155, 70, 70);
+
+				fill(175, 173, 250);
+				rect(1100, 130, 8, 600, 5);
+				fill(88, 95, 232);
+				ellipse(1100, 135, 130, 130);
+				fill(250, 31, 104);
+				ellipse(1100, 135, 100, 100);
+				fill(250, 150, 98);
+				ellipse(1100, 135, 70, 70);
+
+			}
+
+			void drawGumdrops(){
+				stroke(255,255,255);
+				strokeWeight(5);
+				fill(103,224,111);
+				arc(40, 800, 70, 80, 180, 360);
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(40,780);
+				point(30,770);
+				point(50,770);
+
+				fill(114,197,252);
+				arc(110, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(110,780);
+				point(100,770);
+				point(120,770);
+
+				fill(103,224,101);
+				arc(180, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(180,780);
+				point(170,770);
+				point(190,770);
+
+				fill(114,197,252);
+				arc(250, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(250,780);
+				point(260,770);
+				point(240,770);
+
+				fill(103,224,101);
+				arc(320, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(320,780);
+				point(310,770);
+				point(330,770);
+
+				fill(114,197,252);
+				arc(390, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(390,780);
+				point(380,770);
+				point(400,770);
+
+				fill(103,224,101);
+				arc(460, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(460,780);
+				point(450,770);
+				point(470,770);
+
+				fill(114,197,252);
+				arc(530, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(530,780);
+				point(520,770);
+				point(540,770);
+
+				fill(103,224,101);
+				arc(600, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(600,780);
+				point(590,770);
+				point(610,770);
+
+				fill(114,197,252);
+				arc(670, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(670,780);
+				point(660,770);
+				point(680,770);
+
+				fill(103,224,101);
+				arc(740, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(740,780);
+				point(730,770);
+				point(750,770);
+
+				fill(114,197,252);
+				arc(810, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(810,780);
+				point(800,770);
+				point(820,770);
+
+				fill(103,224,101);
+				arc(880, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(880,780);
+				point(890,770);
+				point(870,770);
+
+				fill(114,197,252);
+				arc(950, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(950,780);
+				point(940,770);
+				point(960,770);
+
+				fill(103,224,101);
+				arc(1020, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(1020,780);
+				point(1010,770);
+				point(1030,770);
+
+				fill(114,197,252);
+				arc(1100, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(1100,780);
+				point(1110,770);
+				point(1090,770);
+
+				fill(103,224,101);
+				arc(1170, 800, 70, 80, 180, 360);
+				noStroke();
+				fill(255,255,255);
+				stroke(255,255,255);
+				strokeWeight(5);
+				point(1170,780);
+				point(1160,770);
+				point(1180, 770);
+
+				
+
+			}
+
+			class Building{
+				var r;
+				var g;
+				var b;
+				var width;
+				var height;
+				var xPos;
+				var yPos;
+				var speedX;
+
+				Building(color, w, h, X, Y, xSpeed){
+					r = color[0];
+					g = color[1];
+					b = color[2];
+					width = w;
+					height = h;
+					xPos = X;
+					yPos = Y;
+					speedX = xSpeed;
+				}
+				void move(){
+					xPos -= speedX;
+				}
+				void drawBuilding(){
+					noStroke();
+					fill(r, g, b);
+					rect(xPos, yPos, width, height, 40);
+				}
+			}
+
+
+			class Lay {
+				var speedA; 
+				var layerEndX;
+				var currentWidth;
+				var listBuildings = [];
+				var width222;
+				var height222;
+				var colorj4j;
+
+				Lay (aSpeed, width, height, color){
+
+					speedA = aSpeed;
+					layerEndX = 1200;
+					width222 = width;
+					height222 = height;
+					colorj4j = color;
+
+					currentWidth = 0;
+					while (currentWidth<layerEndX){
+						var buildingWidth = random(width222 - 100, width222);
+						var buildingHeight = random(height222 - 100, height222 + 150);
+						building1 = new Building(colorj4j, buildingWidth, buildingHeight, currentWidth, 800 - buildingHeight + 35, speedA);
+						listBuildings.push(building1);
+						currentWidth = currentWidth + buildingWidth;
+
+					}
+				}
+
+				void addBuildings(){
+					var buildingWidth = random(width222 - 50, width222 + 100);
+					var buildingHeight = random(height222 - 20, height222 + 200);
+					building1 = new Building(colorj4j, buildingWidth, buildingHeight, currentWidth, 800 - buildingHeight + 35, speedA);
+					listBuildings.push(building1);
+					currentWidth = currentWidth + buildingWidth;
+
+				}
+
+				void moveLayer(){
+					for(var i = 0; i < listBuildings.length; i++){
+						listBuildings[i].move();
+					}
+					currentWidth = currentWidth - speedA;
+					if(currentWidth<=layerEndX){
+						addBuildings();
+					}
+				}
+
+				void drawLayer(){
+					for(var i = 0; i < listBuildings.length; i++){
+						listBuildings[i].drawBuilding();
+					}
+				}
+			}
+
+
+		</script>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+	</body>
+</html>
